@@ -24,17 +24,13 @@
 
 
 <div class="jumbotron text-center w-100 mx-auto d-inline-block">
-   <form action="qcgn/mail.php" method="post">
-
-      <label>Email Address</label>
-      <input type="text" name="email_address">
-      <br>
-      <label>Your Feedback</label>
-      <textarea name="feedback" cols="41" rows="1"></textarea>
-      <br>
-      <input type="submit" name="send" value="Submit">
-      
-      </form>
+   <form action="mail.php" method="post">
+      <input type="text" name="name">
+      <input type="text" name="mail">
+      <input type="text" name="subject">
+      <textarea name="message" id="" cols="30" rows="10"></textarea>
+      <button type="submit" name="submit">Send</button>
+   </form>
 </div>
 
 

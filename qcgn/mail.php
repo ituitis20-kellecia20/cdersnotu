@@ -2,14 +2,20 @@
 
 if (isset($_POST['submit'])) {
    $name = $_POST['name'];
-   $subject = $_POST['subject'];
-   $mailFrom = $_POST['mail'];
+   $mail = $_POST['mail'];
    $message = $_POST['message'];
 
-   $mailTo = "kellecia20@itu.edu.tr";
-   $headers = "C ders notu: ".$mailFrom;
-   $txt = "ismi: ".$name.".\n\n".$message;
+   $from = 'from';
+   $subject = "subject";
+   $body = "$name.\n".
+               "$mail.\n".
+                  "$message.\n";
 
-   mail($mailTo, $subject, $txt, $headers);
-   header("Location: form.php?mailsend");
+   $to = "kellecia20@itu.edu.tr";
+   $headers = "$from \r\n";
+   
+
+   mail($to,$subject,$body,$headers);
+
+   header("Location: form.html");
 }

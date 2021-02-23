@@ -34,4 +34,9 @@ body {
 .orta {
   margin-left: 40%;
 }
+
+.iframe {
+  width: 85vw;
+  height: calc(85vw/1.77);
+}
 /*# sourceMappingURL=theme.css.map */

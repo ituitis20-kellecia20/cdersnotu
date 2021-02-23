@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ cout << "Hello, World!" << endl;
+ return 0;
+}
+
+açıklamalar:
+kodları açıkla
+/n kullanımı
+
+
+
+<------------------------------------------>
+
+
+int isim = değer(tamsayı);
+double isim = değer(ondalık);
+isim = isim (oparator);
+const double,int isim = değer;
+//,/**/ yorum satırı
+
+
+

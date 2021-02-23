@@ -26,6 +26,10 @@ body {
   height: 40px !important;
 }
 
+p {
+  font-size: large;
+}
+
 .bekle {
   height: 30vh;
   margin-top: 10vh;
@@ -38,5 +42,46 @@ body {
 .iframe {
   width: 85vw;
   height: calc(85vw/1.77);
+}
+
+.span {
+  color: #ff00dd;
+}
+
+.cpp {
+  background-color: #acacac;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+  border-left: solid 6px #868686;
+  padding: 10px 6px;
+  font-weight: bold;
+}
+
+.kare {
+  color: #ff3a3a;
+}
+
+.inc {
+  color: #557799;
+}
+
+.lib {
+  color: #008800;
+}
+
+.int {
+  color: #ff7b00;
+}
+
+.func {
+  color: #ffc13a;
+}
+
+.usin {
+  color: #0066BB;
+}
+
+.paran {
+  color: white;
 }
 /*# sourceMappingURL=theme.css.map */

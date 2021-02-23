@@ -20,24 +20,117 @@
 	<h1 class="container-fluid text-center mt-0"><a href="index.html" class="text-decoration-none text-dark baslik">BLG102 - C Ders Dökümanı</a></br>
 	<small class="text-muted lead"> by Alper Oğuz Kelleci</small></h1>
 </header>
-
 <!--------------------------------------------------------------------------------------------------------------------------------->
+<div>
 
 
-<div class="jumbotron text-center bekle">
-	<p class="mt-5 font-weight-bolder">Bu sayfa oluşturulmadı.<br>Sabırla bekleyiniz.</p>
+
+
+
+<div class="jumbotron mx-0 my-3 fs-1">
+	<h3>Klasik <strong>Hello World!</strong></h3>
+	<p>Hızlı bir proje başlangıcı atalım. Bir klasör oluştur. Konumuna dikkat et özellikle de onedrive senkronizasyonu daha önce başımıza çok iş çıkarttı ona da dikkat et. Dosya bilgisayarında olsun bulutta değil.</p>
+	<p><span class="span">İsimlendirme yaparken böyle kullanacağım</span> Bu isimleri istediğiniz gibi koyabilirsiniz.</p>
+	<p>Klasörün içine <span class="span">deneme</span>.cpp biçiminde bir dosya oluşturuyoruz.</p>
+	<p>VSCode içerisinde file sekmesinden ya da welcome sayfasından open folder ile klasörün tamamını seçiyoruz. CPP dosyasını değil tüm dosyayı.</p>
+	<p>Kodlamaya başlayalım cpp dosyamızda:</p>
+	
+	
+		<div class="cpp">
+		<span class="kare">#</span>
+		<span class="inc">include</span>
+		<span class="lib">&lt;iostream&gt;</span>
+		<br><br>
+		<span class="int">int</span>
+		<span class="func">main</span>
+		<span class="paran">()<br>{</span><br>
+		&emsp;<span class="func">std::</span>
+		<span class="paran">cout</span>&nbsp;
+		<span class="int">&lt;&lt;</span>
+		&nbsp;"Hello World!"&nbsp;
+		<span class="paran">;</span><br>
+		&emsp;<span class="int">return</span>&nbsp;<span class="paran"> 0</span>	
+		<span class="paran">;</span><br>
+	  	<span class="paran">}</span> 
+		</div><br>
+		<p>Kodumuzu yazdık. Peki nasıl çalıştıracağız? VSCode içerisinde yukarıdaki menüde run kısmında start debugging'e tıklayabilirsiniz ya da kısaca <strong>F5</strong>'e basabilirsiniz. Size iki seçenek sunacaktır. Şimdilik GDB'yi seçelim ve devam edelim. Derleme başlayacaktır. C programlarının birçok dilden farkı çalıştırılabilmesi için derleme yapılması gerekmesidir. VSCode size ilk olarak launch.json diye bir dosya oluşturacaktır.</p>
+		<pre class="jumbotron">
+			{
+				"version": "0.2.0",
+				"configurations": [
+					{
+						"name": "gcc.exe - Etkin dosyayı derle ve dosyada hata ayıkla",
+						"type": "cppdbg",
+						"request": "launch",
+						"program": "<span class="text-danger">${fileDirname}\\${fileBasenameNoExtension}</span>.exe",
+						"args": [],
+						"stopAtEntry": false,
+						"cwd": "${workspaceFolder}",
+						"environment": [],
+						"console": "externalTerminal",
+						"MIMode": "gdb",
+						"miDebuggerPath": "<strong class="text-danger">MİNGWKONUMU/mingw64/bin/gdb.exe</strong>",
+						"setupCommands": [
+							{
+								"description": "gdb için düzgün yazdırmayı etkinleştir",
+								"text": "-enable-pretty-printing",
+								"ignoreFailures": true
+							}
+						],
+						"preLaunchTask": "C/C++: gcc.exe etkin dosyayı derle"  
+					}
+				]
+			}
+		</pre>
+		<p>MinGW kurulumu ve detayları önceki derste verdiğim videodan da bulabilirsiniz bayağı yararlı bir video idi. Devam edelim. Oluşan bir diğer dosya ise tasks.json. Bunu açtığınızda karşınıza farklı şeyler çıkabilir. Temelde olması gereken en basit şekli şudur.</p>
+		<pre class="jumbotron">
+			{
+				"version": "2.0.0",
+				"tasks": [
+					{
+						"label": "C/C++: gcc.exe etkin dosyayı derle",
+						"type": "shell",
+						"command": "g++ -g <span class="span">deneme</span>.cpp",
+						"problemMatcher": [],
+						"group": {
+							"kind": "build",
+							"isDefault": true
+						}
+					}
+				]
+			}
+		</pre>
+		<p>task.json kodunu da düzenledikten sonra bir kez daha <strong>F5</strong> basıyoruz. Tekrardan bir hata alıyorsak launch.json dosyamızdaki <br><span class="text-muted">"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",</span><br>olarak verilen kodu, dosyanızın içerisinde bir exe bulacaksınız onun ismi ile değişmeniz gerekiyor.<br><span class="text-muted">"program": "${workspaceFolder}/a.exe",</span><br>Genelde ismi a.exe oluyor ama sizde ne görünüyorsa onu tabii ki. <strong>F5</strong> ile bir daha çalıştırıyoruz kodumuzu.</p>
+		<h4>Çıktı:</h4>
+		<div class="cpp">
+			<p class="mb-0">Hello World!</p>
+		</div>
+		<br>
+		<p>Hala çıktı alamıyorsanız biraz internet araştırması yapmanız gerekebilir. Çıktı alabildiyseniz yine üst menüden run sekmesinden add configuration ile windows(başlat) seçeneğini de ekliyoruz. Program karşısındaki Program adını girin, örneğin: ${workspaceFolder}/a.exe biçimindeki kodu ${workspaceFolder}/a.exe biçiminde düzenleyoruz. Sol menüde çalıştırma tuşu üzerinde böcek bulunan bir buton var. O "run" kısmı. Orada üst tarafta açılır bir sekme var oradan windows(başlat) seçerek terminal penceresinde de çalıştırıp çıktı alabilirsiniz. Son olarak .run eklentisini yüklediyseniz ctrl+alt+n veya sol üstteki çalıştırma butonu ile kodunuzu çalıştırabilirsiniz.</p>
+		<p>Derleme ve çalıştırma bu şekilde çalışıyor. Çok basit düzeyde anlattım ve bu açıklama değil ezber bilgiydi. Daha detaylı açıklamalar için kitabı karıştırabilirsiniz. Ama buradaki bilgiler ile kodunuzu rahatlıkla çalıştırabiliyor olmanız lazım.</p>
+		<p>Gerekirse bu derse düzenleme veya devam yazısı yazarım.</p>
+		<p>İyi çalışmalar</p>
+		
+
+
+
 </div>
 
-
-
-
-
-
-
-
-
 <!--------------------------------------------------------------------------------------------------------------------------------->
-<footer class=" pt-1 pb-0 text-center footer mb-0 fixed-bottom">
+
+<div class="jumbotron mx-3 my-2 py-2">
+	<div class="row">
+		<div class="col-md-6">
+			 <a href=".kurulum.html" class="btn btn-block btn-md btn-danger" type="button">Önceki</a>
+		</div>
+		<div class="col-md-6">
+			 <a href="../veri/degiskenler.html" class="btn btn-block btn-md btn-success" type="button">Sonraki</a>
+		</div>
+	</div>
+</div>
+</div>
+
+<footer class=" pt-1 pb-0 text-center footer mb-0">
 	<div class="container-fluid">
 		 <div class="vcenter">
 			  <div class="">
@@ -66,6 +159,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
-<script src="assets/js/ek.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="../../assets/js/ek.js"></script>
 </body>
 </html> 

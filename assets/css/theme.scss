@@ -25,6 +25,10 @@ body {
   height: 40px !important;
 }
 
+p {
+  font-size: large;
+}
+
 .bekle {
   height: 30vh;
   margin-top: 10vh;
@@ -38,3 +42,26 @@ body {
     width: 85vw;
     height: calc(85vw/1.77);
 }
+
+.span {
+  color: rgb(255, 0, 221);
+}
+
+.cpp {
+  background-color: #acacac;
+  border: 1px solid rgb(226, 226, 226);
+  text-align: left;
+  border-left: solid 6px rgb(134, 134, 134);
+  padding: 10px 6px;
+  font-weight: bold;
+}
+
+.kare{ color: rgb(255, 58, 58);}
+.inc{ color: #557799}
+.lib{ color: #008800;}
+.int{ color: #ff7b00;}
+.func{ color: #ffc13a;}
+.name{}
+.usin{ color: #0066BB;}
+.paran{ color: white;}
+

@@ -84,4 +84,15 @@ p {
 .paran {
   color: white;
 }
+
+.list-group-item {
+  background-color: #cecece;
+  border-bottom: 1px solid #8a8a8a !important;
+  padding-bottom: 0px;
+}
+
+.guncel {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 /*# sourceMappingURL=theme.css.map */

@@ -23,9 +23,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------------->
 
 
-<div class="jumbotron text-center bekle">
-	<p class="mt-5 font-weight-bolder">Yenileniyor.<br></p>
-</div>
+
 
 
 <div>
@@ -43,7 +41,7 @@
 	<p>Kodlamaya başlayalım c dosyamızda:</p>
 	
 	
-		<div class="cpp">
+		<!-- <div class="cpp">
 		<span class="kare">#</span>
 		<span class="inc">include</span>
 		<span class="lib">&lt;iostream&gt;</span>
@@ -59,6 +57,23 @@
 		&emsp;<span class="int">return</span>&nbsp;<span class="paran"> 0</span>	
 		<span class="paran">;</span><br>
 	  	<span class="paran">}</span> 
+		</div><br> -->
+
+
+		<div class="cpp">
+			<span class="kare">#</span>
+			<span class="inc">include</span>
+			<span class="lib">&lt;stdio.h&gt;</span>
+			<br><br>
+			<span class="int">int</span>
+			<span class="func">main</span>
+			<span class="paran">()<br>{</span><br>
+			&emsp;<span class="func">printf</span>
+			<span class="paran">("Hello World!")</span>
+			<span class="paran">;</span><br>
+			&emsp;<span class="int">return</span>&nbsp;<span class="paran"> 0</span>	
+			<span class="paran">;</span><br>
+			  <span class="paran">}</span> 
 		</div><br>
 		<p>Kodumuzu yazdık. Peki nasıl çalıştıracağız? VSCode içerisinde yukarıdaki menüde run kısmında start debugging'e tıklayabilirsiniz ya da kısaca <strong>F5</strong>'e basabilirsiniz. Size iki seçenek sunacaktır. Şimdilik GDB'yi seçelim ve devam edelim. Derleme başlayacaktır. C programlarının birçok dilden farkı çalıştırılabilmesi için derleme yapılması gerekmesidir. VSCode size ilk olarak launch.json diye bir dosya oluşturacaktır.</p>
 		<pre class="jumbotron">
@@ -97,7 +112,7 @@
 					{
 						"label": "C/C++: gcc.exe etkin dosyayı derle",
 						"type": "shell",
-						"command": "g++ -g <span class="span">deneme</span>.cpp",
+						"command": "g++ -g <span class="span">deneme</span>.c",
 						"problemMatcher": [],
 						"group": {
 							"kind": "build",

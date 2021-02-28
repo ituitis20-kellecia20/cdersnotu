@@ -61,19 +61,14 @@
 
 
 		<div class="cpp">
-			<span class="kare">#</span>
-			<span class="inc">include</span>
+			<span class="par">#</span>
+			<span class="int">include</span>
 			<span class="lib">&lt;stdio.h&gt;</span>
 			<br><br>
-			<span class="int">int</span>
-			<span class="func">main</span>
-			<span class="paran">()<br>{</span><br>
-			&emsp;<span class="func">printf</span>
-			<span class="paran">("Hello World!")</span>
-			<span class="paran">;</span><br>
-			&emsp;<span class="int">return</span>&nbsp;<span class="paran"> 0</span>	
-			<span class="paran">;</span><br>
-			  <span class="paran">}</span> 
+			<span class="int">int</span> <span class="fun">main</span><span class="par">()<br>{</span><br>
+			<span class="fun">printf</span> <span class="par">(<span class="quo">"Hello World!"</span>)</span><span class="par">;</span><br>
+			<span class="int">return</span> <span class="nam">0</span><span class="par">;</span><br>
+			<span class="par">}</span> 
 		</div><br>
 		<p>Kodumuzu yazdık. Peki nasıl çalıştıracağız? VSCode içerisinde yukarıdaki menüde run kısmında start debugging'e tıklayabilirsiniz ya da kısaca <strong>F5</strong>'e basabilirsiniz. Size iki seçenek sunacaktır. Şimdilik GDB'yi seçelim ve devam edelim. Derleme başlayacaktır. C programlarının birçok dilden farkı çalıştırılabilmesi için derleme yapılması gerekmesidir. VSCode size ilk olarak launch.json diye bir dosya oluşturacaktır.</p>
 		<pre class="jumbotron">
@@ -84,7 +79,7 @@
 						"name": "gcc.exe - Etkin dosyayı derle ve dosyada hata ayıkla",
 						"type": "cppdbg",
 						"request": "launch",
-						"program": "<span class="text-danger">${fileDirname}\\${fileBasenameNoExtension}</span>.exe",
+						"program": "<spanHello class="text-danger">${fileDirname}\\${fileBasenameNoExtension}</spanHello>.exe",
 						"args": [],
 						"stopAtEntry": false,
 						"cwd": "${workspaceFolder}",
@@ -182,7 +177,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 <script src="../../assets/js/ek.js"></script>
 </body>
 </html> 

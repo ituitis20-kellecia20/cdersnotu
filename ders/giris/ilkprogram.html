@@ -61,10 +61,7 @@
 
 
 		<div class="cpp">
-			<span class="par">#</span>
-			<span class="int">include</span>
-			<span class="lib">&lt;stdio.h&gt;</span>
-			<br><br>
+			<span class="par">#</span><span class="int">include</span> <span class="lib">&lt;stdio.h&gt;</span><br><br>
 			<span class="int">int</span> <span class="fun">main</span><span class="par">()<br>{</span><br>
 			<span class="fun">printf</span> <span class="par">(<span class="quo">"Hello World!"</span>)</span><span class="par">;</span><br>
 			<span class="int">return</span> <span class="nam">0</span><span class="par">;</span><br>
@@ -120,7 +117,7 @@
 		<p>task.json kodunu da düzenledikten sonra bir kez daha <strong>F5</strong> basıyoruz. Tekrardan bir hata alıyorsak launch.json dosyamızdaki <br><span class="text-muted">"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",</span><br>olarak verilen kodu, dosyanızın içerisinde bir exe bulacaksınız onun ismi ile değişmeniz gerekiyor.<br><span class="text-muted">"program": "${workspaceFolder}/a.exe",</span><br>Genelde ismi a.exe oluyor ama sizde ne görünüyorsa onu tabii ki. <strong>F5</strong> ile bir daha çalıştırıyoruz kodumuzu.</p>
 		<h4>Çıktı:</h4>
 		<div class="cpp">
-			<p class="mb-0">Hello World!</p>
+			<span class="nam">Hello World!</span>
 		</div>
 		<br>
 		<p>Hala çıktı alamıyorsanız biraz internet araştırması yapmanız gerekebilir. Çıktı alabildiyseniz yine üst menüden run sekmesinden add configuration ile windows(başlat) seçeneğini de ekliyoruz. Program karşısındaki Program adını girin, örneğin: ${workspaceFolder}/a.exe biçimindeki kodu ${workspaceFolder}/a.exe biçiminde düzenleyoruz. Sol menüde çalıştırma tuşu üzerinde böcek bulunan bir buton var. O "run" kısmı. Orada üst tarafta açılır bir sekme var oradan windows(başlat) seçerek terminal penceresinde de çalıştırıp çıktı alabilirsiniz. Son olarak .run eklentisini yüklediyseniz ctrl+alt+n veya sol üstteki çalıştırma butonu ile kodunuzu çalıştırabilirsiniz.</p>
